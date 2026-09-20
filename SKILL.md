@@ -77,6 +77,7 @@ it, then stop.
    | `artisan` and `composer.json` requiring `laravel/framework` | `laravel.md` (its `package.json` belongs to Laravel) |
    | `manifest.json` with `manifest_version`, no bundler config | `browser-extension.md` |
    | `*.sln`, `*.slnx`, or `*.csproj` | `dotnet.md` |
+   | `settings.gradle(.kts)`, `build.gradle(.kts)` or a `gradlew` wrapper, anywhere in the repo | `android-gradle.md` (a Gradle module inside another project is a secondary stack) |
    | `package.json` | `node.md` |
    | `requirements.txt`, `pyproject.toml`, `setup.py`, or `*.py` in the root | `python.md` |
    | none of the above | `scripts-and-docs.md` |

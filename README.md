@@ -112,6 +112,7 @@ something back with certainty — stops the run rather than guessing.
 | Laravel | `references/stacks/laravel.md` |
 | .NET | `references/stacks/dotnet.md` |
 | Node | `references/stacks/node.md` |
+| Android / Gradle | `references/stacks/android-gradle.md` |
 | Scripts and docs only (no real logic) | `references/stacks/scripts-and-docs.md` |
 
 The skill detects the stack from markers in the repository (`composer.json`+`artisan`,

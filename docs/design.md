@@ -35,6 +35,7 @@ a local branch with small commits and a report. No questions after the pre-fligh
     laravel.md                conventions, Pest/PHPUnit, Pint, artisan smoke checks
     dotnet.md                 src/tests layout, xUnit, dotnet format, Designer.cs rules
     node.md                   src/tests, existing runner or node:test
+    android-gradle.md         Gradle/Android conventions, JVM unit tests only, manifest contracts
     scripts-and-docs.md       PowerShell/batch/HTML/markdown-only repos
   prompts/work-block.md       prompt template for an execution subagent
   prompts/reviewer.md         prompt template for the final reviewer agent
@@ -327,6 +328,7 @@ Framework conventions override this layout.
 | Laravel | Laravel conventions; new patterns (Actions/Services) only if the project already uses them | existing Pest/PHPUnit | Pint | `php artisan route:list`, `php artisan test` |
 | .NET | `src/<Project>/`, `tests/<Project>.Tests/`; never hand-edit `*.Designer.cs` | xUnit | `dotnet format` | `dotnet build` |
 | Node | `src/`, `tests/` | existing runner, else `node:test` | only if already configured | existing build script or `node --check` |
+| Android/Gradle | Gradle conventions (`app/src/main|test`), tidy within them; class/package renames are contract changes | JVM unit tests (`testDebugUnitTest`); never `connectedAndroidTest` | only an already configured ktlint/Spotless | `assembleDebug`, else `compileDebug*` |
 | Scripts and docs | clutter, naming, `docs/` structure only | none unless there is real logic | none | PowerShell parser check for `.ps1` |
 
 Windows pitfalls (in every stack reference where relevant): reserved file names (`nul`, `con`,

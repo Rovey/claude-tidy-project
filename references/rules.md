@@ -45,10 +45,16 @@ working exactly as before:
 - browser extension id, permissions, match patterns, message types, storage keys;
 - files the program reads or writes by path at runtime (templates, data, exports, logs);
 - the public API of anything other projects import;
-- anything the README or the project's `CLAUDE.md` tells people to run or open.
+- anything the README or the project's `CLAUDE.md` tells people to run or open;
+- `.gitattributes` patterns, including Git LFS `filter=lfs` rules and `eol`/`text` settings.
 
 Root launchers never move or get renamed. Another contract file may move only when every consumer
 is inside the repository and is updated in the same commit.
+
+Git LFS: never run `git lfs` commands, and treat pointer files as ordinary tracked files. Moving a
+file that a `.gitattributes` LFS pattern matches takes it out of LFS at its new path, which commits
+the binary into the repository. Move such a file only when the same commit updates the pattern;
+otherwise leave it where it is and report it.
 
 ## Behavior
 
